@@ -1,8 +1,11 @@
 import time
+import sys
 from selenium import webdriver
 
+testurl = sys.argv[1]
+
 driver = webdriver.Chrome()
-driver.get("http://10.0.4.118/")
+driver.get(testurl)
 
 element = driver.find_element_by_name("user");
 element.send_keys("admin");
