@@ -2,6 +2,11 @@ import time
 import sys
 from selenium import webdriver
 
+if len(sys.argv) < 2:
+    print 'Missed argument needful. Please try "python login.py fully_server_URL"'
+    sys.exit()
+
+
 testurl = sys.argv[1]
 
 driver = webdriver.Chrome()
